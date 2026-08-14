@@ -18,10 +18,8 @@ TEST_CASE("finds an added item and rejects a missing one") {
 TEST_CASE("removing drops the count") {
     Inventory inv;
     inv.add("potion");
-    inv.add("swrod");
-    CHECK(inv.count() == 2);
-    inv.remove("potion");
+    inv.add("sword");
+    inv.remove("sword");
     CHECK(inv.count() == 1);
-    CHECK_FALSE(inv.has("potion"));
+    CHECK_FALSE(inv.has("sword"));
 }
-

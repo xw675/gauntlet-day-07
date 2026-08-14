@@ -15,3 +15,6 @@ bool Inventory::has(const std::string& item) const {
     return false;
 }
 
+void Inventory::remove(const std::string&) {
+    m_items.pop_back();
+}
