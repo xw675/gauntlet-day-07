@@ -14,3 +14,14 @@ TEST_CASE("finds an added item and rejects a missing one") {
     CHECK(inv.has("potion"));
     CHECK_FALSE(inv.has("sword"));
 }
+
+TEST_CASE("removing drops the count") {
+    Inventory inv;
+    inv.add("potion");
+    inv.add("swrod");
+    CHECK(inv.count() == 2);
+    inv.remove("potion");
+    CHECK(inv.count() == 1);
+    CHECK_FALSE(inv.has("potion"));
+}
+
