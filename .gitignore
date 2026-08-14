@@ -1,0 +1,5 @@
+*.o
+
+tests
+
+.DS_Store
