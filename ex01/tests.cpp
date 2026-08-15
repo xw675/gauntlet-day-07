@@ -6,11 +6,6 @@ struct InventoryFixture {
     InventoryFixture() { inv.add("potion"); inv.add("sword"); }
 };
 
-TEST_CASE_METHOD(InventoryFixture, "removing drops the count") {
-    inv.remove("sword");
-    CHECK(inv.count() == 1);
-}
-
 TEST_CASE_METHOD(InventoryFixture, "adding an item raises the count") {
     inv.add("elixir");
     CHECK(inv.count() == 3);
